@@ -36,3 +36,14 @@ boton.addEventListener("click", ()=>{
     <button id='boton2'><a href='index.html'>volver</a></button>
     `;
 });
+
+//segundo evento 
+boton2.addEventListener("click", ()=>{
+    peligro= true;
+    recordando= spiderman(peligro);
+    window.location.href= "index.html";
+    document.body.innerHTML= `
+    <h1>${recordando}</h1>
+    <button id='boton2'><a href='index.html'>volver</a></button>
+    `;
+});
