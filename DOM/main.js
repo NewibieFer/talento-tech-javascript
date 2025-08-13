@@ -5,9 +5,9 @@ const v4= "ten cuidado con el duende verde";
 
 const spiderman= (peligro)=>{
     if (peligro==true){
-        return 'como decia el ${v1} ${v2} ${v3}';
+        return `como decia el ${v1} ${v2} ${v3}`;
     }else{
-        return 'como decia el ${v1} ${v4}';
+        return `como decia el ${v1} ${v4}`;
     }
 };
 
@@ -25,3 +25,14 @@ boton2.innerText= "no peligro"
 
 document.body.appendChild(boton);
 document.body.appendChild(boton2);
+
+//eventos en java script conbotones
+boton.addEventListener("click", ()=>{
+    peligro= false;
+    recordando= spiderman(peligro);
+    window.location.href= "index.html";
+    document.body.innerHTML= `
+    <h1>${recordando}</h1>
+    <button id='boton2'><a href='index.html'>volver</a></button>
+    `;
+});
